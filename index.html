@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Welcome</h1>
+    <center>
+        <div id="form-data">
+            <form name="Form" action="" method="post">
+                <h2>Sign up</h2>
+                <input type="text/" placeholder="Enter Your Name" name="user" id="" /><br />
+                <input type="password" placeholder="Password" name="password" id="" /><br />
+                <input type="button" onclick="data()" name="submit" id="login" value="Login" />
+                <h3 id="enter"></h3>
+            </form>
+            <div id="output">
+                <div id="box">
+                    <h1 id="head">Hi your name and password displayed here</h1>
+
+                </div>
+
+            </div>
+        </div>
+    </center>
+
+
+    <script>
+
+        const data = () => {
+            let username = document.Form.user.value;
+            let password = document.Form.password.value;
+
+            if (username == "" && password == "") {
+                let x = document.getElementById("enter");
+                x.innerHTML = "Please Enter Something";
+                x.style.display = "block";
+
+            } else if (username != "" && password != "") {
+                document.getElementById("enter").style.display = "none";
+                document.getElementById("head").innerHTML = "Your name is " + username + " Password is " + password;
+            }
+            else {
+                alert('Something Went Wrong');
+            }
+        }
+
+    </script>
+</body>
+
+</html>
